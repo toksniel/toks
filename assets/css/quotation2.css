@@ -1,0 +1,131 @@
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: rgb(204,204,204); 
+    font: 16px "Arial";
+ 
+
+}
+p, table{
+    color:black;
+}
+.page-body{
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm;
+    margin: 10mm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);  
+ 
+    page-break-after: always; 
+}
+.subpage-body{
+    padding: none;
+    border: none;
+    height: 257mm;
+
+}
+.sel {
+    color:black;
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden;
+}
+.txt {
+    padding: 0px;
+    background-color: white;
+}
+.selected {
+    background-color: black;
+    color:white;  
+}
+.hide {
+    display: none;
+}
+.sel .options {
+    background-color: #f2f2f2;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.sel .options div {
+    transition: all 0.2s ease-out;
+}
+.sel .options div:hover {
+    background-color: #80d4ff;
+    color:black;
+    border-style: 1px;
+}
+
+
+
+
+
+.fontadd{
+font-size: 14px;
+}
+
+.button3 {
+    position: fixed;
+    background-color: #3b5998; 
+    color: white  ; 
+    border: 2px solid #3b5998;
+    border-radius: 5px;
+    bottom: 100px;
+    right:10px;
+}
+div{
+    border-color:#E8E8E8;
+    border-style: 1px;
+    color: black;
+}
+
+.button2 {
+    position: fixed;
+    background-color: #cccccc; 
+    color: black; 
+    border: 2px solid #cccccc;
+    border-radius: 1000px;
+    bottom:20px;
+    right:5px;
+}
+
+.button2:hover {
+    background-color: #3b5998;
+    color: white;
+    border: 2px solid #3b5998;
+}
+
+@media print{
+    html, body, .page-body {
+        width: 210mm;
+        height: 297mm;  
+        margin: 0mm;
+        padding: 0cm;
+        padding: none;
+        background: white !important;
+        box-shadow: none !important;
+
+        }
+    div { 
+        border: none !important; 
+        float: none !important; position: static !important; display: inline; 
+          box-sizing: content-box !important;
+    } 
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+    input,textarea , div{
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+    .page-break {
+        display: block; 
+        page-break-after: always;    
+    }
+}

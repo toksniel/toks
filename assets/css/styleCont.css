@@ -1,0 +1,16 @@
+.select-ccode {
+  background: transparent;
+  border: 0;
+}
+
+.select-ccode:focus{
+	outline: none;
+}
+
+.focus-off {
+	outline: none;
+}
+
+.roundedRec {
+	border-radius: 5px;
+}
