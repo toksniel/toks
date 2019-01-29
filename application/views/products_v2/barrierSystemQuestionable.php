@@ -224,7 +224,6 @@
                     <div class="col-sm-3 ">
                         <span><input  type="text" id="byCode" class="form-control"><i class="fa fa-search"></i></span>
                     </div>
-
                     <div class="col-sm-12">
                         <table class="table table-hover">
                             <thead class="bg-dark text-light">
@@ -245,8 +244,6 @@
         </div>
     </div>
 </div>
-
-
 <script>
     $(document).ready(function(){
         showSysCompList();
@@ -269,8 +266,6 @@
             }
 	    });
     }
-
- 
     function getSysCompCode(code,name,unit,pricess){
         var x = JSON.stringify(pricess);
         modalctr++;
@@ -298,7 +293,6 @@
         var htmlSTR = '<tr id="'+modalctr2+'"><td hidden><input type="text" class="txtIndex2" value="'+modalctr2+'" hidden><input type="text" value="'+code+'" id="textMaterialCode'+modalctr2+'" ></td><td><label for=""id="textMatName'+modalctr2+'">'+name+'</label></td><td><input type="text" id="textMatSize'+modalctr2+'" class="form-control sss"></td><td><label id="textMatUnit'+modalctr2+'">'+unit+'</label></td><td><input type="text" class="form-control sss" id="textMatQty'+modalctr2+'"></td><td><label for="" id="textMatPrice'+modalctr2+'" class="sss">'+price+'</label></td><td><label for="" id="textMatPriceTotal'+modalctr2+'">0.00</label></td><td><button class="btn btn-sm btn-danger "onclick="clearRow('+"'#"+modalctr2+"'"+')">x</button></td></tr>';
         $(htmlSTR).insertBefore($('#matTotal'));
     }
-
     // -----------------------------------------------------compute components start
     $('#clickMe').on('keypress keyenter keyup focusin focusout blur click',".tooo", function(){
 		var subtextProd = $(this).val();
@@ -392,9 +386,6 @@
             }
            realtime();
     }
-
-     
-    
     function realtime(){
 		var totalMatPrice = parseFloat($('#totalMatPrice').text().replace(/[^.0-9]/g, ''));
 		var totalCompPrice = parseFloat($('#totalCompPrice').text().replace(/[^.0-9]/g, ''));
