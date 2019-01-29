@@ -28,7 +28,7 @@
         <div class="col-lg-6 col-md-6  col-sm-4">
             <h1>Create Barrier</h1>
         </div>
-        <div class="col-lg-3 col-md-3  col-sm-2">
+        <div class="col-lg-3 col-md-3  col-sm-2">   
             <input type="button" class="btn btn-outline-success rounded" id="save" value="Save" > 
         </div>
     </div>
@@ -402,8 +402,8 @@
 
 		$('#netPHP').text(tPHP.toLocaleString('en-US', {minimumFractionDigits: 2,maximumFractionDigits: 2}));
 	}
-         // -----------------------------------------------------compute materials start
-     // -----------------------------------------------------saving
+    // -----------------------------------------------------compute materials start
+    // -----------------------------------------------------saving
     $('#save').on('click',function(){
         var sysCode = $('#textSysCode').val();
         var sysName = $('#textSysName').val();

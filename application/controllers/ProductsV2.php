@@ -458,6 +458,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function materialsCreate(){
             $this->load->model('Query_progOne');
             $data['dims']  =  $this->Query_progOne->fetchData('TABLEdimproperties',"");
+            $data['drops']  =  $this->Query_progOne->fetchData('TABLEproductsdroplist',"dropCat='unitsL' OR dropCat='unitsV'");
             $this->load->view('reusable/header');
             $this->load->view('reusable/sidebar');
             $this->load->view('products_v2/materials',$data);

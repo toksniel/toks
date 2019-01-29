@@ -63,10 +63,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6  col-sm-6">
-                                <img src="#" alt="" id="blah" width="80%" height="auto">
-                                <input type="file" name="pic" accept="image/*" class="form-control" id="zxc">
-                            </div>
+
                         </div>
                         <div class="row">
                             <div class="col-lg-12 col-md-12  col-sm-12">
@@ -95,9 +92,15 @@
                                 <label for="">Unit of Basis</label>
                                 <select name="" id="textUnitBasis" class="form-control">
                                     <option value="" selected disabled>Select Unit</option>
-                                    <option value="mm">Millimeter</option>
-                                    <option value="pcs">Pieces</option>
-                                    <option value="m">Meter</option>
+                                   <?php
+                                    if(!empty($drops)){
+                                        foreach($drops as $key => $value ){
+                                            echo'<option value="'.$value->dropVal.'">'.$value->dropName.'</option>';
+                                            
+                                        }
+                                    }
+                                   ?>
+                                   <option value="pcs">Pieces</option>
                                 </select>
                             </div>
                         </div>
